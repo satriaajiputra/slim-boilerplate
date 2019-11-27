@@ -27,6 +27,6 @@ composer install --optimize-autoloader --no-dev
 ```
 
 ## License
-This bolerplate is licensed under the MIT license. See [License File](LICENSE.md) for more information.
+This bolerplate is licensed under the MIT license. See [License File](LICENSE) for more information.
 
 Copyright &copy; 2019. Satria Aji Putra
