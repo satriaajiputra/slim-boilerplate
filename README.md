@@ -16,12 +16,35 @@ composer create-project --prefer-dist satmaxt/slim-boilerplate stdev
 
 Change ``stdev`` to your project name
 
-### Install 
+### Install  Dependency
 ```bash
 composer install
 ```
 
+### Configure Database Connection
+Open file ``configs/database.php``
+```php
+return [
+    'driver'    => 'mysql',
+    'host'      => 'localhost',
+    'database'  => 'yourdbname',
+    'username'  => 'yourdbusername',
+    'password'  => 'yourdbpassword',
+    'charset'   => 'utf8',
+    'collation' => 'utf8_unicode_ci',
+    'prefix'    => '',
+];
+```
+and change it with your database information
+
 ## Deployment
+Open file ``bootstrap/app.php`` and find this line:
+```php
+$app->addErrorMiddleware(true, true, true);
+```
+change the first argument to ``false`` and save it.
+
+### Install Dependency
 ```bash
 composer install --optimize-autoloader --no-dev
 ```
